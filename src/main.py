@@ -1,22 +1,25 @@
 from fastapi import FastAPI
 
+from src.api.documents import router as documents_router
+from src.api.search import router as search_router
 from src.config.settings import settings
-
+from src.api.analysis import router as analysis_router
 
 app = FastAPI(
     title=settings.app_name,
     description=(
-        "AI-powered procurement and contract intelligence platform "
-        "for extracting obligations, risks, deadlines, and compliance requirements."
+        "Procurement and contract intelligence API using retrieval-augmented "
+        "generation and structured document metadata."
     ),
     version=settings.version,
 )
 
+app.include_router(documents_router)
+app.include_router(search_router)
+app.include_router(analysis_router)
 
 @app.get("/")
-def read_root() -> dict[str, str]:
-    """Return basic application information."""
-
+def root() -> dict[str, str]:
     return {
         "name": settings.app_name,
         "status": "running",
@@ -25,7 +28,7 @@ def read_root() -> dict[str, str]:
 
 
 @app.get("/health")
-def health_check() -> dict[str, str]:
-    """Return the current API health status."""
-
-    return {"status": "healthy"}
+def health() -> dict[str, str]:
+    return {
+        "status": "healthy",
+    }

@@ -33,3 +33,9 @@ class ProcurementSearchResponse(BaseModel):
     supplier: str | None = None
     document_type: str | None = None
     results: list[RetrievedProcurementChunk]
+
+class ProcurementAnalysisRequest(BaseModel):
+    query: str = Field(min_length=1)
+    supplier: str | None = None
+    document_type: str | None = None
+    n_results: int = Field(default=5, ge=1, le=10)

@@ -1,4 +1,4 @@
-from src.llm.mock_provider import MockLLMProvider
+from src.llm.provider_factory import create_llm_provider
 from src.llm.prompt_builder import SYSTEM_PROMPT, build_analysis_prompt
 from src.llm.provider import LLMProvider
 from src.models.procurement_report import ProcurementReport, SourceCitation
@@ -13,7 +13,7 @@ class ProcurementAnalysisService:
         self,
         provider: LLMProvider | None = None,
     ) -> None:
-        self.provider = provider or MockLLMProvider()
+        self.provider = provider or create_llm_provider()
 
     def analyze(
         self,

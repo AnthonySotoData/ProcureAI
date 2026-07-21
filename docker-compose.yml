@@ -1,0 +1,16 @@
+services:
+  procureai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: procureai-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - procureai_vector_store:/app/data/vector_store
+    restart: unless-stopped
+
+volumes:
+  procureai_vector_store:

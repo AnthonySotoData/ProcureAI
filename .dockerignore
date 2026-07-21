@@ -1,0 +1,15 @@
+.git
+.github
+.venv
+.env
+.env.*
+!.env.example
+__pycache__
+*.py[cod]
+.pytest_cache
+tests
+data/vector_store
+.vscode
+.idea
+Thumbs.db
+.DS_Store

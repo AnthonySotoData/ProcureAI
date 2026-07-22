@@ -436,3 +436,7 @@ ProcureAI demonstrates practical experience with:
 ProcureAI is an original portfolio project developed to demonstrate modern AI engineering and software development practices.
 
 The included procurement documents are synthetic examples created for demonstration purposes only and should not be interpreted as legal or contractual guidance.
+
+# License
+
+This project is licensed under the MIT License. See the LICENSE file for details.

@@ -440,3 +440,14 @@ The included procurement documents are synthetic examples created for demonstrat
 # License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+## About the Author
+
+Hi, I'm **Anthony Soto**, a data and AI professional with a background in healthcare operations, revenue cycle optimization, and applied machine learning. I enjoy building practical AI solutions that solve real-world business problems through modern data engineering, Retrieval-Augmented Generation (RAG), and intelligent automation.
+
+I developed **ProcureAI** as an original portfolio project to demonstrate how AI can improve procurement and contract analysis through Retrieval-Augmented Generation (RAG), semantic search, document intelligence, and large language models. This project showcases the application of AI to supply chain and procurement workflows by transforming complex purchasing documentation into structured, actionable insights.
+
+### Connect with Me
+
+- **GitHub:** https://github.com/AnthonySotoData
+- **LinkedIn:** https://www.linkedin.com/in/anthony-soto-a7b68716b
